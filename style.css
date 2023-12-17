@@ -125,7 +125,8 @@ body {
   position: relative;
 }
 
-.hero__image__container:hover {
+.hero__image__container:hover,
+.hero__image__container:focus {
   cursor: pointer;
 
   &::after {
