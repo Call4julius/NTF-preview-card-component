@@ -101,7 +101,7 @@ body {
   display: grid;
   place-content: center;
   gap: var(--spacer-2);
-  padding: var(--spacer-5) var(--spacer-1);
+  padding: var(--spacer-3) var(--spacer-1);
 }
 
 .container {
