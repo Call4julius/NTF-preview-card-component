@@ -4,8 +4,8 @@
 /* ------RESET----- */
 /* ----------------*/
 *,
-*:before,
-*after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -99,34 +99,34 @@ body {
   background-color: hsl(var(--clr-neutral-900));
 
   display: grid;
-  place-content: center;
-  gap: var(--spacer-2);
-  padding: var(--spacer-3) var(--spacer-1);
+  place-items: center;
+  padding-block: var(--spacer-1);
 }
 
 .container {
-  margin: 0 auto;
-  background-color: hsl(var(--clr-neutral-800));
-  padding: var(--spacer-1);
-}
-
-@media screen and (min-width: 31.25rem) {
-  .container {
-    width: 55%;
-    max-width: 37.5rem;
-  }
+  display: grid;
+  place-items: center;
+  margin-inline: var(--spacer-2);
 }
 
 .hero {
+  background-color: hsl(var(--clr-neutral-800));
+  padding: var(--spacer-2);
+  margin-bottom: var(--spacer-3);
   gap: var(--spacer-1);
+}
+
+@media screen and (min-width: 31.25rem) {
+  .hero {
+    width: min(60%, 37.5rem);
+  }
 }
 
 .hero__image__container {
   position: relative;
 }
 
-.hero__image__container:hover,
-.hero__image__container:focus {
+.hero__image__container:hover {
   cursor: pointer;
 
   &::after {
@@ -135,7 +135,7 @@ body {
 }
 
 .hero__image__container::after {
-  content: url(images/icon-view.svg);
+  content: url("images/icon-view.svg");
   position: absolute;
   inset: 0;
   display: grid;
